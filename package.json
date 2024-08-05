@@ -11,6 +11,10 @@
   "description": "",
   "dependencies": {
     "@launchdarkly/node-server-sdk": "^9.5.0",
-    "dotenv": "^16.4.5"
+    "@launchdarkly/openfeature-node-server": "^1.0.0",
+    "@openfeature/server-sdk": "^1.15.0",
+    "dotenv": "^16.4.5",
+    "launchdarkly-node-server-sdk": "^7.0.4",
+    "winston": "^3.13.1"
   }
 }
