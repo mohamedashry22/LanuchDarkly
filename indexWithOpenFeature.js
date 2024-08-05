@@ -1,4 +1,4 @@
-const { getFeatureValueForAnonymousUser } = require('./featureFlagsWithOpenFeature');
+const { getFlag } = require('./featureFlagsWithOpenFeature');
 
 require('dotenv').config();
 
@@ -6,10 +6,10 @@ const main = async () => {
   try {
     // const anonymousUserContext = createAnonymousUserCtx();
 
-    const isFeatureEnabled = await getFeatureValueForAnonymousUser('login-sso', 'false');
+    const isFeatureEnabled = await getFlag('acr-api', 'false');
     console.log(`Is feature enabled for anonymous user: ${isFeatureEnabled}`);
 
-    const isFeatureEnabledw= await getFeatureValueForAnonymousUser('acr-api', 'false');
+    const isFeatureEnabledw= await getFlag('acr-api', 'false');
     console.log(`Is feature enabled for anonymous user=> acr: ${isFeatureEnabledw}`);
 
   } catch (error) {
